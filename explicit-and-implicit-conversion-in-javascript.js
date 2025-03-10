@@ -22,11 +22,24 @@ Use console.log() to clearly show the before-and-after type conversions.
 let result = "5" - 2;
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+let isValid = Boolean(""); //change to empty string to make isValid false
 if (isValid) {
     console.log("This is valid!");
 }
+else 
+    console.log("This is invalid!");
 
 let age = "25";
-let totalAge = age + 5;
+let totalAge = Number(age) + 5; //explicit conversion to a number so it doesn't concatenate the 5 and actually does addition
 console.log("Total Age: " + totalAge);
+
+
+let digitOne = 5;
+let digitTwo = "4";
+let sum = digitOne + Number(digitTwo); //explicit conversion
+console.log(sum);
+
+let digitThree = 9;
+let digitFour = "6"; 
+let difference =  digitThree - digitFour; //implicit conversion
+console.log(difference);
